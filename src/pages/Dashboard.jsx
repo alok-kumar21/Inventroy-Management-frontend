@@ -4,7 +4,9 @@ import useFetch from "./useFetch";
 const Dashboard = () => {
   const navigate = useNavigate();
 
-  const { data } = useFetch("http://localhost:5001/api/inventory/stats");
+  const { data } = useFetch(
+    "https://inventroy-management-backend.vercel.app/api/inventory/stats"
+  );
   console.log(data);
 
   const logout = () => {

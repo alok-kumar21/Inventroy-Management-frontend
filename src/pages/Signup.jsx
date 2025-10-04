@@ -20,13 +20,16 @@ const Signup = () => {
     console.log(formData);
 
     try {
-      const response = fetch("http://localhost:5001/api/auth/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = fetch(
+        "https://inventroy-management-backend.vercel.app/api/auth/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       if (!response) {
         throw new Error("Failed to add Data");
       }

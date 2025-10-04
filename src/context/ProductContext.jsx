@@ -12,7 +12,7 @@ export function ProductProvider({ children }) {
     data,
     loading: productLoading,
     error: productError,
-  } = useFetch("http://localhost:5001/api/inventory");
+  } = useFetch("https://inventroy-management-backend.vercel.app/api/inventory");
 
   const [searchTerm, setSearchTerm] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -44,13 +44,16 @@ export function ProductProvider({ children }) {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5001/api/inventory", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://inventroy-management-backend.vercel.app/api/inventory",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to save product");
@@ -76,7 +79,7 @@ export function ProductProvider({ children }) {
   const handleDelete = async (productId) => {
     try {
       const response = await fetch(
-        `http://localhost:5001/api/inventory/${productId}`,
+        `https://inventroy-management-backend.vercel.app/api/inventory/${productId}`,
         {
           method: "DELETE",
           headers: {
@@ -120,7 +123,7 @@ export function ProductProvider({ children }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5001/api/inventory/${editingProduct._id}`,
+        `https://inventroy-management-backend.vercel.app/api/inventory/${editingProduct._id}`,
         {
           method: "PUT",
           headers: {
@@ -154,7 +157,7 @@ export function ProductProvider({ children }) {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5001/api/inventory?search=${searchTerm}`
+        `https://inventroy-management-backend.vercel.app/api/inventory?search=${searchTerm}`
       );
       if (!response.ok) throw new Error("Search failed");
 
