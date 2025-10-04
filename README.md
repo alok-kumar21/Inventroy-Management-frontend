@@ -1,16 +1,82 @@
-# React + Vite
+# Inventory Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Inventory Management System is a web app that lets users securely log in and manage their products. It features a dashboard with quick stats like total items, low stock, and recently added items. Users can add, edit, delete, search, and filter products through a clean, responsive UI. Data is stored using localStorage or backend APIs with secure authentication.
 
-Currently, two official plugins are available:
+Built with a **React** frontend, **Node.js/Express** backend, **MongoDB** database
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Demo Link
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[Live Demo](https://pendora-frontend.vercel.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Quick Start
+
+```
+git clone https://github.com/alok-kumar21/Inventroy-Management-frontend.git
+cd <your-repo>
+npm install
+npm run dev
+
+```
+
+## Technologies
+
+- React JS
+- React Router
+- Node.js
+- Express
+- MongoDB
+- Bootstrap
+- Context API
+
+## Demo Video
+
+[Video Link](https://youtu.be/FzJ-0-eVBI0)
+
+## Features
+
+**Authentication**
+
+- Secure Login / Signup with session handling.
+- Session persists until user logs out.
+
+**Dashboard**
+
+- View total items, low stock items, and recently added items.
+- Quick navigation to inventory management.
+
+**Inventory Management**
+
+- List all products in a table/grid view.
+- Add new products with name, category, price, stock, and date.
+- Edit existing products with updated details.
+- Delete products permanently.
+- Search and filter products by name, category, or stock status.
+
+**Search**
+
+- Instantly search for products by typing keywords in the search bar.
+- Live filtering as you type—no need to refresh or click search.
+
+## API Reference
+
+### **Auth Routes**<br>
+
+- POST /api/auth/signup → Register a new user
+- POST /api/auth/login → Login and return JWT
+
+**Inventory Routes**
+
+- GET /api/inventory → List all products
+- GET /api/inventory/:id → Get a single product
+- POST /api/inventory → Add a new product (protected)
+- PUT /api/inventory/:id → Update a product (protected)
+- DELETE /api/inventory/:id → Delete a product (protected)
+- GET /api/inventory/stats → Get dashboard stats (total, low stock, recent)
+
+## Contact
+
+For bugs or feature requests, please reach out to alok.8kumar21@gmail.com
