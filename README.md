@@ -8,7 +8,7 @@ Built with a **React** frontend, **Node.js/Express** backend, **MongoDB** databa
 
 ## Demo Link
 
-[Live Demo](https://pendora-frontend.vercel.app/)
+[Live Demo](https://inventroy-management-frontend.vercel.app/login)
 
 ---
 
@@ -31,10 +31,6 @@ npm run dev
 - MongoDB
 - Bootstrap
 - Context API
-
-## Demo Video
-
-[Video Link](https://youtu.be/FzJ-0-eVBI0)
 
 ## Features
 
